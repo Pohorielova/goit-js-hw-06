@@ -10,9 +10,10 @@ console.log(`Number of categories: ${categoriesList.length}`);
 // найдет и выведет в консоль текст заголовка элемента (тега <h2>) 
 // и количество элементов в категории (всех вложенных в него <li>).
 
-const Category = categoriesList.forEach((item)=>{
+const categoriesItem = categoriesList.forEach((item)=>{
  console.log('Category:',item.firstElementChild.textContent);
  console.log('Elements:', item.querySelectorAll('li').length);
+
 });
 
 // В результате, в консоли будут выведены такие сообщения.
