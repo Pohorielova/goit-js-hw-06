@@ -18,5 +18,10 @@ const btn =document.querySelector('.change-color');
 const colorText =document.querySelector('.color');
 // 2. повесить собітие на кнопку
 btn.addEventListener('click', event=>{
-
+//  для определения цвета делаю переменную для функции генератора и делаю ее вызов!
+  const color = getRandomHexColor();
+// записываю цвет куда надо
+  colorText.textContent = color;
+  body.style.backgroundColor = color;
 })
+
