@@ -25,7 +25,7 @@ function onDecrementBtn(event) {
     
     
 };
-function onIncrementBtn() {
+function onIncrementBtn(event) {
  
     refs.counterValue.textContent = Number(refs.counterValue.textContent) + 1;
 };
