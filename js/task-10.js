@@ -40,7 +40,7 @@ const createBoxes = amount =>{
 // даю стили
     newElement.style.width =`${30+10*i}px`;
     newElement.style.height =`${30+10*i}px`;
-    newElement.style.marginBottom ="10px";
+    // newElement.style.marginBottom ="10px";
     newElement.style.backgroundColor =getRandomHexColor();
 // пушим елемент в новый созданный массив
     newElementsArray.push(newElement);
@@ -58,3 +58,7 @@ createBtn.addEventListener("click",()=>{
 });
 // чистим коробку второй кнопкой
 destroyBtn.addEventListener("click", ()=>divBox.innerHTML = "");
+// просто прикольно
+divBox.style.display = 'flex';
+divBox.style.flexWrap = 'wrap'
+divBox.style.gap = '10px'

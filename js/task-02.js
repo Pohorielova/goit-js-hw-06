@@ -13,23 +13,19 @@ const ingredients = [
 // 3.Добавит элементу класс item.
 // 4.После чего вставит все <li> за одну операцию в список ul#ingredients.
 
-// 1.взяли наш массив овощей
-const list = document.querySelector('#ingredients')
-// 2.сделала пустой массив в памяти, туда буду складывать лишки
-const liArray = []
-// 3.перебираю овощи
-ingredients.forEach(ingredient => {
-  // 4.создаю лишку
-    const item = document.createElement('li')
-    // 5. даю ей класс
-    item.className = 'item'
-    // 6.записываю название овоща, которое взяла в переборе пункт 3, 
-    // оно создает синхронно лишку и пишет имя, по этому ляжет все по порядку 
-    item.textContent = ingredient
-    // 7.пушу мою лишку в массив в памяти пункт 2
-    liArray.push(item)
-})
-// 8.вешаю эту кучку в пустой уль в хтмл, распыляя туда свой массив из памяти.
-list.append(...liArray)
 
+const list = document.querySelector('#ingredients');
+const liArray =[];
+
+// for (const item of ingredients) 
+ingredients.forEach(ingredient =>
+{
+  const elem = document.createElement('li');
+  elem.textContent = ingredient;
+  elem.className ='item';
+  liArray.push(elem);
+
+});
+
+list.append(...liArray);
 
