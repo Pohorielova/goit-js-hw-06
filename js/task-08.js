@@ -30,11 +30,11 @@ form.addEventListener('submit', function (event){
 const {email, password} = this.elements;
 if(!email.value || !password.value) {
 alert("Все поля должны быть заполнены")
-}
+} else if(email.value && password.value){
 // собрать данные
-
-      console.log(email.value, password.value);
+      console.log({email: email.value, password: password.value});
+      // console.log(`email: ${email.value} password: ${password.value}`);
 // ресетнуть форму
-      form.reset();
+      form.reset();}
 });
 
